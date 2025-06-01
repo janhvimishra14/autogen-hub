@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scenery Generator</title>
+    <link rel="stylesheet" href="scenery.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🌿 Scenery Generator</h1>
+      <p>Type a scene and get beautiful images!</p>
+    </header>
+
+    <main>
+      <form id="sceneForm">
+        <label for="description">Describe your scene:</label>
+        <input
+          type="text"
+          id="description"
+          placeholder="e.g., beach, mountain, forest"
+          required
+        />
+        <button type="submit">Generate Scenery</button>
+      </form>
+      <div id="imagesContainer"></div>
+    </main>
+
+    <footer>
+      <p>Powered by AutoGen-Hub</p>
+    </footer>
+
+    <script src="scenery.js"></script>
+  </body>
+</html>

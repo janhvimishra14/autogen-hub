@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bitmoji Fashion Styler</title>
+    <link rel="stylesheet" href="bitmoji.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🧢 Bitmoji Fashion Styler</h1>
+      <p>Customize your Bitmoji's outfit and accessories!</p>
+    </header>
+
+    <main>
+      <form id="styleForm">
+        <label for="style">Choose a style:</label>
+        <select id="style" required>
+          <option value="">--Select--</option>
+          <option value="casual">Casual</option>
+          <option value="sporty">Sporty</option>
+          <option value="party">Party</option>
+          <option value="professional">Professional</option>
+        </select>
+
+        <label for="season">Select season:</label>
+        <select id="season" required>
+          <option value="">--Select--</option>
+          <option value="summer">Summer</option>
+          <option value="winter">Winter</option>
+          <option value="rainy">Rainy</option>
+          <option value="spring">Spring</option>
+        </select>
+
+        <button type="submit">Get Suggestions</button>
+      </form>
+
+      <div id="result" style="margin-top: 20px">
+        <p id="outfit-text"></p>
+        <img
+          id="outfit-image"
+          src=""
+          alt="Suggested Outfit"
+          style="display: none; max-width: 300px; border-radius: 10px"
+        />
+      </div>
+    </main>
+
+    <footer>
+      <p>Powered by AutoGen Hub</p>
+    </footer>
+
+    <script src="bitmoji.js"></script>
+  </body>
+</html>

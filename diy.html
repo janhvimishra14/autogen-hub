@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIY Project Recommender</title>
+    <link rel="stylesheet" href="diy.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🛠️ DIY Project Recommender</h1>
+      <p>Get a project idea based on your interests!</p>
+    </header>
+
+    <main>
+      <form id="projectForm">
+        <label for="category">Choose a category:</label>
+        <select id="category" required>
+          <option value="">--Select--</option>
+          <option value="home">Home Decor</option>
+          <option value="tech">Tech</option>
+          <option value="garden">Gardening</option>
+          <option value="craft">Crafts</option>
+        </select>
+
+        <label for="skill">Your skill level:</label>
+        <select id="skill" required>
+          <option value="">--Select--</option>
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
+
+        <button type="submit">Get Project Idea</button>
+      </form>
+
+      <div id="result" class="result-box"></div>
+    </main>
+
+    <footer>
+      <p>Powered by AutoGen Hub</p>
+    </footer>
+
+    <script src="diy.js"></script>
+  </body>
+</html>

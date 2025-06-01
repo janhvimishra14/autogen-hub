@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stylish Resume Generator</title>
+    <link rel="stylesheet" href="resume.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Resume Generator</h1>
+      <p>Create a beautiful resume easily</p>
+    </header>
+
+    <div class="container">
+      <!-- Form Section -->
+      <div id="resumeForm" class="form-section">
+        <h2>Enter Your Details</h2>
+        <form onsubmit="generateResume(); return false;">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" required />
+
+          <label for="tagline">Tagline</label>
+          <input
+            type="text"
+            id="tagline"
+            placeholder="E.g. Web Developer, Designer"
+          />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" required />
+
+          <label for="phone">Phone</label>
+          <input type="text" id="phone" required />
+
+          <label for="summary">Summary</label>
+          <textarea id="summary" rows="4" required></textarea>
+
+          <label for="skills">Skills (comma-separated)</label>
+          <input
+            type="text"
+            id="skills"
+            placeholder="E.g. HTML, CSS, JavaScript"
+          />
+
+          <label for="experience">Experience</label>
+          <textarea id="experience" rows="4" required></textarea>
+
+          <label for="education">Education</label>
+          <textarea id="education" rows="3" required></textarea>
+
+          <button type="submit">Generate Resume</button>
+        </form>
+      </div>
+
+      <!-- Preview Section -->
+      <div class="preview">
+        <h2>Resume Preview</h2>
+        <div id="resume-output" class="resume" style="display: none">
+          <div class="header">
+            <h1 id="res-name"></h1>
+            <p class="tagline" id="res-tagline"></p>
+            <p id="res-contact"></p>
+          </div>
+
+          <div class="section">
+            <h2>Summary</h2>
+            <p id="res-summary"></p>
+          </div>
+
+          <div class="section">
+            <h2>Skills</h2>
+            <ul id="res-skills"></ul>
+          </div>
+
+          <div class="section">
+            <h2>Experience</h2>
+            <p id="res-experience"></p>
+          </div>
+
+          <div class="section">
+            <h2>Education</h2>
+            <p id="res-education"></p>
+          </div>
+        </div>
+        <button
+          id="downloadBtn"
+          onclick="downloadResumePDF()"
+          style="display: none"
+        >
+          Download as PDF
+        </button>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="resume.js"></script>
+  </body>
+</html>
